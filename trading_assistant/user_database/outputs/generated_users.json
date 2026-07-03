@@ -1,0 +1,342 @@
+{
+  "user1": {
+    "profile": {
+      "name": "User 1",
+      "email": "user1@example.com",
+      "created_at": "2024-12-14T09:39:44.256144",
+      "last_login": "2025-05-22T09:39:44.256178"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256181",
+      "region": "US",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "ko",
+      "default_fiat": "USDT"
+    }
+  },
+  "user2": {
+    "profile": {
+      "name": "User 2",
+      "email": "user2@example.com",
+      "created_at": "2025-05-19T09:39:44.256191",
+      "last_login": "2025-05-22T09:39:44.256197"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256199",
+      "region": "SG",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "ko",
+      "default_fiat": "USDT"
+    }
+  },
+  "user3": {
+    "profile": {
+      "name": "User 3",
+      "email": "user3@example.com",
+      "created_at": "2025-04-10T09:39:44.256205",
+      "last_login": "2025-05-22T09:39:44.256210"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256212",
+      "region": "CN",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "ja",
+      "default_fiat": "USDT"
+    }
+  },
+  "user4": {
+    "profile": {
+      "name": "User 4",
+      "email": "user4@example.com",
+      "created_at": "2024-06-03T09:39:44.256217",
+      "last_login": "2025-05-22T09:39:44.256222"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256224",
+      "region": "SG",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  },
+  "user5": {
+    "profile": {
+      "name": "User 5",
+      "email": "user5@example.com",
+      "created_at": "2024-06-02T09:39:44.256230",
+      "last_login": "2025-05-22T09:39:44.256235"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "EU",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "ja",
+      "default_fiat": "USDT"
+    }
+  },
+  "user6": {
+    "profile": {
+      "name": "User 6",
+      "email": "user6@example.com",
+      "created_at": "2025-03-10T09:39:44.256240",
+      "last_login": "2025-05-22T09:39:44.256244"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256246",
+      "region": "SG",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "ko",
+      "default_fiat": "USDT"
+    }
+  },
+  "user7": {
+    "profile": {
+      "name": "User 7",
+      "email": "user7@example.com",
+      "created_at": "2024-08-30T09:39:44.256252",
+      "last_login": "2025-05-22T09:39:44.256255"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "CN",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "zh",
+      "default_fiat": "USDT"
+    }
+  },
+  "user8": {
+    "profile": {
+      "name": "User 8",
+      "email": "user8@example.com",
+      "created_at": "2025-04-01T09:39:44.256260",
+      "last_login": "2025-05-22T09:39:44.256264"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256266",
+      "region": "EU",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  },
+  "user9": {
+    "profile": {
+      "name": "User 9",
+      "email": "user9@example.com",
+      "created_at": "2024-12-05T09:39:44.256270",
+      "last_login": "2025-05-22T09:39:44.256274"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256276",
+      "region": "CN",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "ja",
+      "default_fiat": "USDT"
+    }
+  },
+  "user10": {
+    "profile": {
+      "name": "User 10",
+      "email": "user10@example.com",
+      "created_at": "2024-08-09T09:39:44.256281",
+      "last_login": "2025-05-22T09:39:44.256284"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "EU",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "ko",
+      "default_fiat": "USDT"
+    }
+  },
+  "user11": {
+    "profile": {
+      "name": "User 11",
+      "email": "user11@example.com",
+      "created_at": "2025-02-27T09:39:44.256288",
+      "last_login": "2025-05-22T09:39:44.256316"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "CN",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  },
+  "user12": {
+    "profile": {
+      "name": "User 12",
+      "email": "user12@example.com",
+      "created_at": "2024-06-07T09:39:44.256322",
+      "last_login": "2025-05-22T09:39:44.256327"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "US",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  },
+  "user13": {
+    "profile": {
+      "name": "User 13",
+      "email": "user13@example.com",
+      "created_at": "2025-03-06T09:39:44.256332",
+      "last_login": "2025-05-22T09:39:44.256336"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256338",
+      "region": "US",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "zh",
+      "default_fiat": "USDT"
+    }
+  },
+  "user14": {
+    "profile": {
+      "name": "User 14",
+      "email": "user14@example.com",
+      "created_at": "2025-05-21T09:39:44.256343",
+      "last_login": "2025-05-22T09:39:44.256347"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "CN",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "ja",
+      "default_fiat": "USDT"
+    }
+  },
+  "user15": {
+    "profile": {
+      "name": "User 15",
+      "email": "user15@example.com",
+      "created_at": "2025-02-07T09:39:44.256351",
+      "last_login": "2025-05-22T09:39:44.256355"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256357",
+      "region": "US",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "zh",
+      "default_fiat": "USDT"
+    }
+  },
+  "user16": {
+    "profile": {
+      "name": "User 16",
+      "email": "user16@example.com",
+      "created_at": "2024-12-24T09:39:44.256361",
+      "last_login": "2025-05-22T09:39:44.256365"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256366",
+      "region": "EU",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "ja",
+      "default_fiat": "USDT"
+    }
+  },
+  "user17": {
+    "profile": {
+      "name": "User 17",
+      "email": "user17@example.com",
+      "created_at": "2024-12-15T09:39:44.256370",
+      "last_login": "2025-05-22T09:39:44.256373"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "JP",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  },
+  "user18": {
+    "profile": {
+      "name": "User 18",
+      "email": "user18@example.com",
+      "created_at": "2024-11-18T09:39:44.256384",
+      "last_login": "2025-05-22T09:39:44.256387"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "US",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "zh",
+      "default_fiat": "USDT"
+    }
+  },
+  "user19": {
+    "profile": {
+      "name": "User 19",
+      "email": "user19@example.com",
+      "created_at": "2024-12-31T09:39:44.256391",
+      "last_login": "2025-05-22T09:39:44.256399"
+    },
+    "compliance": {
+      "kyc_verified_at": null,
+      "region": "EU",
+      "kyc_verified": false
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  },
+  "user20": {
+    "profile": {
+      "name": "User 20",
+      "email": "user20@example.com",
+      "created_at": "2024-07-10T09:39:44.256406",
+      "last_login": "2025-05-22T09:39:44.256414"
+    },
+    "compliance": {
+      "kyc_verified_at": "2025-05-22T09:39:44.256416",
+      "region": "EU",
+      "kyc_verified": true
+    },
+    "preferences": {
+      "language": "en",
+      "default_fiat": "USDT"
+    }
+  }
+}

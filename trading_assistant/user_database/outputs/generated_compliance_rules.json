@@ -1,0 +1,53 @@
+{
+  "regions": {
+    "US": {
+      "restricted_coins": [
+        "XRP",
+        "LUNA"
+      ],
+      "restricted_trade_types": [
+        "MARGIN"
+      ],
+      "max_transaction_amount": 10000,
+      "alternatives": {
+        "coins": {
+          "XRP": "XLM",
+          "LUNA": "USDT"
+        },
+        "trade_types": {
+          "MARGIN": "SPOT"
+        }
+      }
+    },
+    "CN": {
+      "restricted_coins": [
+        "ALL"
+      ],
+      "restricted_trade_types": [
+        "ALL"
+      ],
+      "max_transaction_amount": 0,
+      "alternatives": {}
+    },
+    "EU": {
+      "restricted_coins": [],
+      "restricted_trade_types": [],
+      "max_transaction_amount": 20000,
+      "alternatives": {}
+    },
+    "SG": {
+      "restricted_coins": [
+        "DOGE",
+        "SHIB"
+      ],
+      "restricted_trade_types": [],
+      "max_transaction_amount": 5000,
+      "alternatives": {
+        "coins": {
+          "DOGE": "BTC",
+          "SHIB": "ETH"
+        }
+      }
+    }
+  }
+}

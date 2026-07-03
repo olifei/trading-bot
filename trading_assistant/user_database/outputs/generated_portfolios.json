@@ -1,0 +1,536 @@
+{
+  "user1": {
+    "total_balance_usdt": "46901.07",
+    "last_updated": "2025-05-22T09:39:44.258234",
+    "assets": {
+      "ETH": {
+        "free": "19.674633",
+        "locked": "0",
+        "total": "19.674633",
+        "value_usdt": "24760.53"
+      },
+      "SOL": {
+        "free": "500.574285",
+        "locked": "0",
+        "total": "500.574285",
+        "value_usdt": "21649.84"
+      },
+      "USDT": {
+        "free": "490.707906",
+        "locked": "0",
+        "total": "490.707906",
+        "value_usdt": "490.71"
+      }
+    }
+  },
+  "user2": {
+    "total_balance_usdt": "40626.62",
+    "last_updated": "2025-05-22T09:39:44.258259",
+    "assets": {
+      "SOL": {
+        "free": "919.278152",
+        "locked": "0",
+        "total": "919.278152",
+        "value_usdt": "39758.78"
+      },
+      "ADA": {
+        "free": "416.54831",
+        "locked": "0",
+        "total": "416.54831",
+        "value_usdt": "160.37"
+      },
+      "USDT": {
+        "free": "707.466358",
+        "locked": "0",
+        "total": "707.466358",
+        "value_usdt": "707.47"
+      }
+    }
+  },
+  "user3": {
+    "total_balance_usdt": "114914.23",
+    "last_updated": "2025-05-22T09:39:44.258283",
+    "assets": {
+      "ETH": {
+        "free": "11.658834",
+        "locked": "0",
+        "total": "11.658834",
+        "value_usdt": "14672.64"
+      },
+      "BNB": {
+        "free": "318.607531",
+        "locked": "0",
+        "total": "318.607531",
+        "value_usdt": "99644.51"
+      },
+      "SOL": {
+        "free": "5.373809",
+        "locked": "0",
+        "total": "5.373809",
+        "value_usdt": "232.42"
+      },
+      "ADA": {
+        "free": "390.135242",
+        "locked": "0",
+        "total": "390.135242",
+        "value_usdt": "150.2"
+      },
+      "USDT": {
+        "free": "214.464602",
+        "locked": "0",
+        "total": "214.464602",
+        "value_usdt": "214.46"
+      }
+    }
+  },
+  "user4": {
+    "total_balance_usdt": "4384.06",
+    "last_updated": "2025-05-22T09:39:44.258306",
+    "assets": {
+      "ETH": {
+        "free": "3.335072",
+        "locked": "0",
+        "total": "3.335072",
+        "value_usdt": "4197.19"
+      },
+      "USDT": {
+        "free": "186.876813",
+        "locked": "0",
+        "total": "186.876813",
+        "value_usdt": "186.88"
+      }
+    }
+  },
+  "user5": {
+    "total_balance_usdt": "316346.79",
+    "last_updated": "2025-05-22T09:39:44.258333",
+    "assets": {
+      "BTC": {
+        "free": "1.248621",
+        "locked": "0",
+        "total": "1.248621",
+        "value_usdt": "21252.15"
+      },
+      "ETH": {
+        "free": "0.005068",
+        "locked": "0",
+        "total": "0.005068",
+        "value_usdt": "6.38"
+      },
+      "BNB": {
+        "free": "941.663988",
+        "locked": "0",
+        "total": "941.663988",
+        "value_usdt": "294505.41"
+      },
+      "USDT": {
+        "free": "582.847578",
+        "locked": "0",
+        "total": "582.847578",
+        "value_usdt": "582.85"
+      }
+    }
+  },
+  "user6": {
+    "total_balance_usdt": "79834.85",
+    "last_updated": "2025-05-22T09:39:44.258349",
+    "assets": {
+      "ETH": {
+        "free": "6.301766",
+        "locked": "0",
+        "total": "6.301766",
+        "value_usdt": "7930.77"
+      },
+      "BNB": {
+        "free": "227.691834",
+        "locked": "0",
+        "total": "227.691834",
+        "value_usdt": "71210.62"
+      },
+      "ADA": {
+        "free": "300.390205",
+        "locked": "0",
+        "total": "300.390205",
+        "value_usdt": "115.65"
+      },
+      "USDT": {
+        "free": "577.80743",
+        "locked": "0",
+        "total": "577.80743",
+        "value_usdt": "577.81"
+      }
+    }
+  },
+  "user7": {
+    "total_balance_usdt": "222705.73",
+    "last_updated": "2025-05-22T09:39:44.258366",
+    "assets": {
+      "ETH": {
+        "free": "18.746675",
+        "locked": "0",
+        "total": "18.746675",
+        "value_usdt": "23592.69"
+      },
+      "BNB": {
+        "free": "634.916896",
+        "locked": "0",
+        "total": "634.916896",
+        "value_usdt": "198570.26"
+      },
+      "ADA": {
+        "free": "197.196703",
+        "locked": "0",
+        "total": "197.196703",
+        "value_usdt": "75.92"
+      },
+      "USDT": {
+        "free": "466.860382",
+        "locked": "0",
+        "total": "466.860382",
+        "value_usdt": "466.86"
+      }
+    }
+  },
+  "user8": {
+    "total_balance_usdt": "105116.46",
+    "last_updated": "2025-05-22T09:39:44.258380",
+    "assets": {
+      "ETH": {
+        "free": "17.484493",
+        "locked": "0",
+        "total": "17.484493",
+        "value_usdt": "22004.23"
+      },
+      "BNB": {
+        "free": "265.628799",
+        "locked": "0",
+        "total": "265.628799",
+        "value_usdt": "83075.41"
+      },
+      "USDT": {
+        "free": "36.823181",
+        "locked": "0",
+        "total": "36.823181",
+        "value_usdt": "36.82"
+      }
+    }
+  },
+  "user9": {
+    "total_balance_usdt": "133867.14",
+    "last_updated": "2025-05-22T09:39:44.258398",
+    "assets": {
+      "BTC": {
+        "free": "1.791199",
+        "locked": "0",
+        "total": "1.791199",
+        "value_usdt": "30487.1"
+      },
+      "BNB": {
+        "free": "276.895643",
+        "locked": "0",
+        "total": "276.895643",
+        "value_usdt": "86599.11"
+      },
+      "SOL": {
+        "free": "385.238931",
+        "locked": "0",
+        "total": "385.238931",
+        "value_usdt": "16661.58"
+      },
+      "USDT": {
+        "free": "119.345842",
+        "locked": "0",
+        "total": "119.345842",
+        "value_usdt": "119.35"
+      }
+    }
+  },
+  "user10": {
+    "total_balance_usdt": "44250.71",
+    "last_updated": "2025-05-22T09:39:44.258416",
+    "assets": {
+      "BTC": {
+        "free": "0.132911",
+        "locked": "0",
+        "total": "0.132911",
+        "value_usdt": "2262.21"
+      },
+      "BNB": {
+        "free": "134.175212",
+        "locked": "0",
+        "total": "134.175212",
+        "value_usdt": "41963.3"
+      },
+      "USDT": {
+        "free": "25.201238",
+        "locked": "0",
+        "total": "25.201238",
+        "value_usdt": "25.2"
+      }
+    }
+  },
+  "user11": {
+    "total_balance_usdt": "37487.53",
+    "last_updated": "2025-05-22T09:39:44.258427",
+    "assets": {
+      "SOL": {
+        "free": "866.519415",
+        "locked": "0",
+        "total": "866.519415",
+        "value_usdt": "37476.96"
+      },
+      "USDT": {
+        "free": "10.564813",
+        "locked": "0",
+        "total": "10.564813",
+        "value_usdt": "10.56"
+      }
+    }
+  },
+  "user12": {
+    "total_balance_usdt": "56105.03",
+    "last_updated": "2025-05-22T09:39:44.258445",
+    "assets": {
+      "ETH": {
+        "free": "8.400098",
+        "locked": "0",
+        "total": "8.400098",
+        "value_usdt": "10571.52"
+      },
+      "BNB": {
+        "free": "11.229529",
+        "locked": "0",
+        "total": "11.229529",
+        "value_usdt": "3512.04"
+      },
+      "SOL": {
+        "free": "966.42169",
+        "locked": "0",
+        "total": "966.42169",
+        "value_usdt": "41797.74"
+      },
+      "USDT": {
+        "free": "223.734327",
+        "locked": "0",
+        "total": "223.734327",
+        "value_usdt": "223.73"
+      }
+    }
+  },
+  "user13": {
+    "total_balance_usdt": "38611.3",
+    "last_updated": "2025-05-22T09:39:44.258463",
+    "assets": {
+      "BTC": {
+        "free": "0.2556",
+        "locked": "0",
+        "total": "0.2556",
+        "value_usdt": "4350.44"
+      },
+      "SOL": {
+        "free": "775.693406",
+        "locked": "0",
+        "total": "775.693406",
+        "value_usdt": "33548.74"
+      },
+      "ADA": {
+        "free": "629.745143",
+        "locked": "0",
+        "total": "629.745143",
+        "value_usdt": "242.45"
+      },
+      "USDT": {
+        "free": "469.668146",
+        "locked": "0",
+        "total": "469.668146",
+        "value_usdt": "469.67"
+      }
+    }
+  },
+  "user14": {
+    "total_balance_usdt": "59536.8",
+    "last_updated": "2025-05-22T09:39:44.258478",
+    "assets": {
+      "ETH": {
+        "free": "14.949598",
+        "locked": "0",
+        "total": "14.949598",
+        "value_usdt": "18814.07"
+      },
+      "BNB": {
+        "free": "128.980553",
+        "locked": "0",
+        "total": "128.980553",
+        "value_usdt": "40338.67"
+      },
+      "USDT": {
+        "free": "384.058507",
+        "locked": "0",
+        "total": "384.058507",
+        "value_usdt": "384.06"
+      }
+    }
+  },
+  "user15": {
+    "total_balance_usdt": "65162.77",
+    "last_updated": "2025-05-22T09:39:44.258495",
+    "assets": {
+      "BTC": {
+        "free": "1.379837",
+        "locked": "0",
+        "total": "1.379837",
+        "value_usdt": "23485.52"
+      },
+      "SOL": {
+        "free": "951.689538",
+        "locked": "0",
+        "total": "951.689538",
+        "value_usdt": "41160.57"
+      },
+      "ADA": {
+        "free": "999.532257",
+        "locked": "0",
+        "total": "999.532257",
+        "value_usdt": "384.82"
+      },
+      "USDT": {
+        "free": "131.859398",
+        "locked": "0",
+        "total": "131.859398",
+        "value_usdt": "131.86"
+      }
+    }
+  },
+  "user16": {
+    "total_balance_usdt": "6526.47",
+    "last_updated": "2025-05-22T09:39:44.258514",
+    "assets": {
+      "ETH": {
+        "free": "4.58123",
+        "locked": "0",
+        "total": "4.58123",
+        "value_usdt": "5765.48"
+      },
+      "SOL": {
+        "free": "1.600505",
+        "locked": "0",
+        "total": "1.600505",
+        "value_usdt": "69.22"
+      },
+      "USDT": {
+        "free": "691.772257",
+        "locked": "0",
+        "total": "691.772257",
+        "value_usdt": "691.77"
+      }
+    }
+  },
+  "user17": {
+    "total_balance_usdt": "8391.06",
+    "last_updated": "2025-05-22T09:39:44.258529",
+    "assets": {
+      "SOL": {
+        "free": "183.238365",
+        "locked": "0",
+        "total": "183.238365",
+        "value_usdt": "7925.06"
+      },
+      "ADA": {
+        "free": "593.150542",
+        "locked": "0",
+        "total": "593.150542",
+        "value_usdt": "228.36"
+      },
+      "USDT": {
+        "free": "237.63477",
+        "locked": "0",
+        "total": "237.63477",
+        "value_usdt": "237.63"
+      }
+    }
+  },
+  "user18": {
+    "total_balance_usdt": "53196.57",
+    "last_updated": "2025-05-22T09:39:44.258542",
+    "assets": {
+      "BTC": {
+        "free": "1.764044",
+        "locked": "0",
+        "total": "1.764044",
+        "value_usdt": "30024.91"
+      },
+      "SOL": {
+        "free": "520.123027",
+        "locked": "0",
+        "total": "520.123027",
+        "value_usdt": "22495.32"
+      },
+      "USDT": {
+        "free": "676.334351",
+        "locked": "0",
+        "total": "676.334351",
+        "value_usdt": "676.33"
+      }
+    }
+  },
+  "user19": {
+    "total_balance_usdt": "49673.59",
+    "last_updated": "2025-05-22T09:39:44.258571",
+    "assets": {
+      "BTC": {
+        "free": "0.519845",
+        "locked": "0",
+        "total": "0.519845",
+        "value_usdt": "8848.02"
+      },
+      "ETH": {
+        "free": "15.259651",
+        "locked": "0",
+        "total": "15.259651",
+        "value_usdt": "19204.27"
+      },
+      "SOL": {
+        "free": "477.230446",
+        "locked": "0",
+        "total": "477.230446",
+        "value_usdt": "20640.22"
+      },
+      "ADA": {
+        "free": "855.09706",
+        "locked": "0",
+        "total": "855.09706",
+        "value_usdt": "329.21"
+      },
+      "USDT": {
+        "free": "651.869383",
+        "locked": "0",
+        "total": "651.869383",
+        "value_usdt": "651.87"
+      }
+    }
+  },
+  "user20": {
+    "total_balance_usdt": "65971.39",
+    "last_updated": "2025-05-22T09:39:44.258584",
+    "assets": {
+      "ETH": {
+        "free": "18.642268",
+        "locked": "0",
+        "total": "18.642268",
+        "value_usdt": "23461.29"
+      },
+      "SOL": {
+        "free": "963.032457",
+        "locked": "0",
+        "total": "963.032457",
+        "value_usdt": "41651.15"
+      },
+      "USDT": {
+        "free": "858.94474",
+        "locked": "0",
+        "total": "858.94474",
+        "value_usdt": "858.94"
+      }
+    }
+  }
+}

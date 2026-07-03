@@ -1,0 +1,166 @@
+{
+  "collections": {
+    "users": {
+      "fields": {
+        "profile": {
+          "type": "map",
+          "fields": {
+            "name": "string",
+            "email": "string",
+            "created_at": "timestamp",
+            "last_login": "timestamp"
+          }
+        },
+        "compliance": {
+          "type": "map",
+          "fields": {
+            "kyc_verified_at": "timestamp",
+            "region": "string",
+            "kyc_verified": "boolean"
+          }
+        },
+        "preferences": {
+          "type": "map",
+          "fields": {
+            "language": "string",
+            "notification_enabled": "boolean",
+            "default_fiat": "string"
+          }
+        }
+      }
+    },
+    "portfolios": {
+      "fields": {
+        "total_balance_usdt": "string",
+        "last_updated": "timestamp",
+        "assets": {
+          "type": "map",
+          "fields": {
+            "*": {
+              "type": "map",
+              "fields": {
+                "free": "string",
+                "locked": "string",
+                "total": "string",
+                "value_usdt": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "market_data": {
+      "documents": {
+        "prices": {
+          "fields": {
+            "last_updated": "timestamp",
+            "prices": {
+              "type": "map",
+              "fields": {
+                "*": {
+                  "type": "map",
+                  "fields": {
+                    "price": "string",
+                    "change_24h": "string",
+                    "volume": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "exchange_rates": {
+          "fields": {
+            "last_updated": "timestamp",
+            "rates": {
+              "type": "map",
+              "fields": {
+                "*": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "transactions": {
+      "fields": {
+        "user_id": "string",
+        "type": "string",
+        "status": "string",
+        "created_at": "timestamp",
+        "updated_at": "timestamp",
+        "order": {
+          "type": "map",
+          "optional": true,
+          "fields": {
+            "symbol": "string",
+            "side": "string",
+            "order_type": "string",
+            "quantity": "string",
+            "price": "string",
+            "amount": "string",
+            "order_id": "string"
+          }
+        },
+        "conversion": {
+          "type": "map",
+          "optional": true,
+          "fields": {
+            "from_asset": "string",
+            "to_asset": "string",
+            "from_amount": "string",
+            "to_amount": "string",
+            "rate": "string",
+            "conversion_id": "string"
+          }
+        }
+      }
+    },
+    "compliance_rules": {
+      "documents": {
+        "regions": {
+          "fields": {
+            "regions": {
+              "type": "map",
+              "fields": {
+                "*": {
+                  "type": "map",
+                  "fields": {
+                    "restricted_coins": {
+                      "type": "array",
+                      "items": "string"
+                    },
+                    "restricted_trade_types": {
+                      "type": "array",
+                      "items": "string"
+                    },
+                    "max_transaction_amount": "number",
+                    "alternatives": {
+                      "type": "map",
+                      "fields": {
+                        "coins": {
+                          "type": "map",
+                          "optional": true,
+                          "fields": {
+                            "*": "string"
+                          }
+                        },
+                        "trade_types": {
+                          "type": "map",
+                          "optional": true,
+                          "fields": {
+                            "*": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1070 @@
+{
+  "tx1": {
+    "user_id": "user1",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-04T09:39:44.261606",
+    "updated_at": "2025-05-04T09:41:44.261606",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "SOL",
+      "from_amount": "13.535992",
+      "to_amount": "23.187674",
+      "rate": "1.713",
+      "conversion_id": "cnv480505"
+    }
+  },
+  "tx2": {
+    "user_id": "user1",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-22T09:39:44.261665",
+    "updated_at": "2025-04-22T09:46:44.261665",
+    "order": {
+      "symbol": "BNBUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.979175",
+      "price": "312.75",
+      "amount": "306.24",
+      "order_id": "ord438975"
+    }
+  },
+  "tx3": {
+    "user_id": "user1",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-24T09:39:44.261693",
+    "updated_at": "2025-04-24T09:49:44.261693",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.814886",
+      "price": "1258.5",
+      "amount": "1025.53",
+      "order_id": "ord514274"
+    }
+  },
+  "tx4": {
+    "user_id": "user1",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-24T09:39:44.261715",
+    "updated_at": "2025-04-24T09:44:44.261715",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.818494",
+      "price": "1258.5",
+      "amount": "1030.07",
+      "order_id": "ord824807"
+    }
+  },
+  "tx5": {
+    "user_id": "user1",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-18T09:39:44.261731",
+    "updated_at": "2025-05-18T09:40:44.261731",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.440345",
+      "price": "43.25",
+      "amount": "19.04",
+      "order_id": "ord721397"
+    }
+  },
+  "tx6": {
+    "user_id": "user2",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-19T09:39:44.261749",
+    "updated_at": "2025-05-19T09:49:44.261749",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.059426",
+      "price": "17020.5",
+      "amount": "1011.46",
+      "order_id": "ord415510"
+    }
+  },
+  "tx7": {
+    "user_id": "user2",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-30T09:39:44.261768",
+    "updated_at": "2025-04-30T09:40:44.261768",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "ADA",
+      "from_amount": "343.147945",
+      "to_amount": "404.913549",
+      "rate": "1.18",
+      "conversion_id": "cnv347009"
+    }
+  },
+  "tx8": {
+    "user_id": "user3",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-29T09:39:44.261792",
+    "updated_at": "2025-04-29T09:41:44.261792",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BNB",
+      "from_amount": "2.252203",
+      "to_amount": "2.128291",
+      "rate": "0.945",
+      "conversion_id": "cnv295204"
+    }
+  },
+  "tx9": {
+    "user_id": "user3",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-26T09:39:44.261809",
+    "updated_at": "2025-04-26T09:42:44.261809",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "SOL",
+      "from_amount": "113.911786",
+      "to_amount": "214.198221",
+      "rate": "1.8804",
+      "conversion_id": "cnv118608"
+    }
+  },
+  "tx10": {
+    "user_id": "user4",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-07T09:39:44.261834",
+    "updated_at": "2025-05-07T09:42:44.261834",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "USDT",
+      "from_amount": "0.691195",
+      "to_amount": "0.723543",
+      "rate": "1.0468",
+      "conversion_id": "cnv847631"
+    }
+  },
+  "tx11": {
+    "user_id": "user4",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-06T09:39:44.261850",
+    "updated_at": "2025-05-06T09:48:44.261850",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.0996",
+      "price": "17020.5",
+      "amount": "1695.24",
+      "order_id": "ord104646"
+    }
+  },
+  "tx12": {
+    "user_id": "user4",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-03T09:39:44.261865",
+    "updated_at": "2025-05-03T09:41:44.261865",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "USDT",
+      "from_amount": "1.696941",
+      "to_amount": "2.583963",
+      "rate": "1.5227",
+      "conversion_id": "cnv948731"
+    }
+  },
+  "tx13": {
+    "user_id": "user4",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-16T09:39:44.261881",
+    "updated_at": "2025-05-16T09:47:44.261881",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.052768",
+      "price": "17020.5",
+      "amount": "898.14",
+      "order_id": "ord432876"
+    }
+  },
+  "tx14": {
+    "user_id": "user5",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-27T09:39:44.261896",
+    "updated_at": "2025-04-27T09:43:44.261896",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "BTC",
+      "from_amount": "22.397792",
+      "to_amount": "13.659271",
+      "rate": "0.6098",
+      "conversion_id": "cnv871516"
+    }
+  },
+  "tx15": {
+    "user_id": "user5",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-02T09:39:44.261913",
+    "updated_at": "2025-05-02T09:40:44.261913",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.312338",
+      "price": "43.25",
+      "amount": "13.51",
+      "order_id": "ord212107"
+    }
+  },
+  "tx16": {
+    "user_id": "user6",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-28T09:39:44.261930",
+    "updated_at": "2025-04-28T09:41:44.261930",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.097678",
+      "price": "17020.5",
+      "amount": "1662.53",
+      "order_id": "ord604082"
+    }
+  },
+  "tx17": {
+    "user_id": "user7",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-17T09:39:44.261947",
+    "updated_at": "2025-05-17T09:43:44.261947",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "ADA",
+      "from_amount": "135.138509",
+      "to_amount": "134.983908",
+      "rate": "0.9989",
+      "conversion_id": "cnv901323"
+    }
+  },
+  "tx18": {
+    "user_id": "user8",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-17T09:39:44.261966",
+    "updated_at": "2025-05-17T09:49:44.261966",
+    "order": {
+      "symbol": "ADAUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.335883",
+      "price": "0.385",
+      "amount": "0.13",
+      "order_id": "ord654530"
+    }
+  },
+  "tx19": {
+    "user_id": "user8",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-28T09:39:44.261980",
+    "updated_at": "2025-04-28T09:49:44.261980",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.209038",
+      "price": "1258.5",
+      "amount": "263.07",
+      "order_id": "ord252629"
+    }
+  },
+  "tx20": {
+    "user_id": "user8",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-08T09:39:44.261994",
+    "updated_at": "2025-05-08T09:42:44.261994",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "BNB",
+      "from_amount": "5.543305",
+      "to_amount": "8.192351",
+      "rate": "1.4779",
+      "conversion_id": "cnv904637"
+    }
+  },
+  "tx21": {
+    "user_id": "user8",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-22T09:39:44.262009",
+    "updated_at": "2025-04-22T09:40:44.262009",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.029507",
+      "price": "17020.5",
+      "amount": "502.22",
+      "order_id": "ord134587"
+    }
+  },
+  "tx22": {
+    "user_id": "user8",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-14T09:39:44.262032",
+    "updated_at": "2025-05-14T09:44:44.262032",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "ETH",
+      "from_amount": "131.704686",
+      "to_amount": "92.035263",
+      "rate": "0.6988",
+      "conversion_id": "cnv502663"
+    }
+  },
+  "tx23": {
+    "user_id": "user9",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-08T09:39:44.262052",
+    "updated_at": "2025-05-08T09:41:44.262052",
+    "order": {
+      "symbol": "BNBUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.554117",
+      "price": "312.75",
+      "amount": "173.3",
+      "order_id": "ord973587"
+    }
+  },
+  "tx24": {
+    "user_id": "user9",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-15T09:39:44.262066",
+    "updated_at": "2025-05-15T09:45:44.262066",
+    "order": {
+      "symbol": "ADAUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.6248",
+      "price": "0.385",
+      "amount": "0.24",
+      "order_id": "ord244328"
+    }
+  },
+  "tx25": {
+    "user_id": "user9",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-08T09:39:44.262079",
+    "updated_at": "2025-05-08T09:40:44.262079",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BTC",
+      "from_amount": "293.45954",
+      "to_amount": "185.719656",
+      "rate": "0.6329",
+      "conversion_id": "cnv253188"
+    }
+  },
+  "tx26": {
+    "user_id": "user9",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-07T09:39:44.262094",
+    "updated_at": "2025-05-07T09:44:44.262094",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BNB",
+      "from_amount": "20.051794",
+      "to_amount": "40.061285",
+      "rate": "1.9979",
+      "conversion_id": "cnv353656"
+    }
+  },
+  "tx27": {
+    "user_id": "user10",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-10T09:39:44.262108",
+    "updated_at": "2025-05-10T09:44:44.262108",
+    "conversion": {
+      "from_asset": "BTC",
+      "to_asset": "BNB",
+      "from_amount": "0.008466",
+      "to_amount": "0.016844",
+      "rate": "1.9896",
+      "conversion_id": "cnv449820"
+    }
+  },
+  "tx28": {
+    "user_id": "user10",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-27T09:39:44.262124",
+    "updated_at": "2025-04-27T09:40:44.262124",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "BTC",
+      "from_amount": "56.951091",
+      "to_amount": "72.061529",
+      "rate": "1.2653",
+      "conversion_id": "cnv221821"
+    }
+  },
+  "tx29": {
+    "user_id": "user10",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-30T09:39:44.262140",
+    "updated_at": "2025-04-30T09:42:44.262140",
+    "conversion": {
+      "from_asset": "BTC",
+      "to_asset": "BNB",
+      "from_amount": "0.11879",
+      "to_amount": "0.075366",
+      "rate": "0.6345",
+      "conversion_id": "cnv792282"
+    }
+  },
+  "tx30": {
+    "user_id": "user10",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-14T09:39:44.262156",
+    "updated_at": "2025-05-14T09:40:44.262156",
+    "conversion": {
+      "from_asset": "BTC",
+      "to_asset": "BNB",
+      "from_amount": "0.097306",
+      "to_amount": "0.062329",
+      "rate": "0.6405",
+      "conversion_id": "cnv881166"
+    }
+  },
+  "tx31": {
+    "user_id": "user10",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-10T09:39:44.262172",
+    "updated_at": "2025-05-10T09:48:44.262172",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.875336",
+      "price": "43.25",
+      "amount": "37.86",
+      "order_id": "ord749973"
+    }
+  },
+  "tx32": {
+    "user_id": "user11",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-08T09:39:44.262191",
+    "updated_at": "2025-05-08T09:40:44.262191",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "USDT",
+      "from_amount": "328.102079",
+      "to_amount": "234.916307",
+      "rate": "0.716",
+      "conversion_id": "cnv868787"
+    }
+  },
+  "tx33": {
+    "user_id": "user11",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-08T09:39:44.262207",
+    "updated_at": "2025-05-08T09:42:44.262207",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "USDT",
+      "from_amount": "779.206489",
+      "to_amount": "452.138837",
+      "rate": "0.5803",
+      "conversion_id": "cnv926891"
+    }
+  },
+  "tx34": {
+    "user_id": "user12",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-29T09:39:44.262231",
+    "updated_at": "2025-04-29T09:42:44.262231",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BNB",
+      "from_amount": "142.461906",
+      "to_amount": "170.482287",
+      "rate": "1.1967",
+      "conversion_id": "cnv881320"
+    }
+  },
+  "tx35": {
+    "user_id": "user12",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-20T09:39:44.262247",
+    "updated_at": "2025-05-20T09:41:44.262247",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BNB",
+      "from_amount": "65.326975",
+      "to_amount": "130.091734",
+      "rate": "1.9914",
+      "conversion_id": "cnv959680"
+    }
+  },
+  "tx36": {
+    "user_id": "user12",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-23T09:39:44.262268",
+    "updated_at": "2025-04-23T09:46:44.262268",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.086757",
+      "price": "17020.5",
+      "amount": "1476.65",
+      "order_id": "ord662387"
+    }
+  },
+  "tx37": {
+    "user_id": "user12",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-16T09:39:44.262285",
+    "updated_at": "2025-05-16T09:47:44.262285",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.857477",
+      "price": "1258.5",
+      "amount": "1079.13",
+      "order_id": "ord513823"
+    }
+  },
+  "tx38": {
+    "user_id": "user12",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-29T09:39:44.262316",
+    "updated_at": "2025-04-29T09:44:44.262316",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "ETH",
+      "from_amount": "4.224655",
+      "to_amount": "7.305829",
+      "rate": "1.7293",
+      "conversion_id": "cnv570112"
+    }
+  },
+  "tx39": {
+    "user_id": "user13",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-20T09:39:44.262335",
+    "updated_at": "2025-05-20T09:47:44.262335",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.408232",
+      "price": "43.25",
+      "amount": "17.66",
+      "order_id": "ord707586"
+    }
+  },
+  "tx40": {
+    "user_id": "user13",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-21T09:39:44.262356",
+    "updated_at": "2025-05-21T09:41:44.262356",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.070238",
+      "price": "1258.5",
+      "amount": "88.39",
+      "order_id": "ord572376"
+    }
+  },
+  "tx41": {
+    "user_id": "user13",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-09T09:39:44.262370",
+    "updated_at": "2025-05-09T09:48:44.262370",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.007789",
+      "price": "1258.5",
+      "amount": "9.8",
+      "order_id": "ord828673"
+    }
+  },
+  "tx42": {
+    "user_id": "user13",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-11T09:39:44.262385",
+    "updated_at": "2025-05-11T09:40:44.262385",
+    "conversion": {
+      "from_asset": "ADA",
+      "to_asset": "BTC",
+      "from_amount": "332.712764",
+      "to_amount": "554.034025",
+      "rate": "1.6652",
+      "conversion_id": "cnv601019"
+    }
+  },
+  "tx43": {
+    "user_id": "user13",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-30T09:39:44.262403",
+    "updated_at": "2025-04-30T09:47:44.262403",
+    "order": {
+      "symbol": "BTCUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.084422",
+      "price": "17020.5",
+      "amount": "1436.9",
+      "order_id": "ord841680"
+    }
+  },
+  "tx44": {
+    "user_id": "user14",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-10T09:39:44.262422",
+    "updated_at": "2025-05-10T09:44:44.262422",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "BNB",
+      "from_amount": "13.117858",
+      "to_amount": "6.80764",
+      "rate": "0.519",
+      "conversion_id": "cnv921725"
+    }
+  },
+  "tx45": {
+    "user_id": "user14",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-23T09:39:44.262440",
+    "updated_at": "2025-04-23T09:43:44.262440",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "BNB",
+      "from_amount": "7.281279",
+      "to_amount": "6.768051",
+      "rate": "0.9295",
+      "conversion_id": "cnv624998"
+    }
+  },
+  "tx46": {
+    "user_id": "user14",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-14T09:39:44.262456",
+    "updated_at": "2025-05-14T09:42:44.262456",
+    "conversion": {
+      "from_asset": "BNB",
+      "to_asset": "ETH",
+      "from_amount": "82.549157",
+      "to_amount": "162.378495",
+      "rate": "1.9671",
+      "conversion_id": "cnv471389"
+    }
+  },
+  "tx47": {
+    "user_id": "user14",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-26T09:39:44.262478",
+    "updated_at": "2025-04-26T09:44:44.262478",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "BNB",
+      "from_amount": "11.340128",
+      "to_amount": "11.274577",
+      "rate": "0.9942",
+      "conversion_id": "cnv673657"
+    }
+  },
+  "tx48": {
+    "user_id": "user14",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-12T09:39:44.262493",
+    "updated_at": "2025-05-12T09:46:44.262493",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.427217",
+      "price": "43.25",
+      "amount": "18.48",
+      "order_id": "ord945151"
+    }
+  },
+  "tx49": {
+    "user_id": "user15",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-25T09:39:44.262510",
+    "updated_at": "2025-04-25T09:42:44.262510",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.604996",
+      "price": "1258.5",
+      "amount": "761.39",
+      "order_id": "ord798374"
+    }
+  },
+  "tx50": {
+    "user_id": "user15",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-27T09:39:44.262532",
+    "updated_at": "2025-04-27T09:46:44.262532",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.763671",
+      "price": "43.25",
+      "amount": "33.03",
+      "order_id": "ord982002"
+    }
+  },
+  "tx51": {
+    "user_id": "user15",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-13T09:39:44.262547",
+    "updated_at": "2025-05-13T09:45:44.262547",
+    "order": {
+      "symbol": "BNBUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.781172",
+      "price": "312.75",
+      "amount": "244.31",
+      "order_id": "ord807544"
+    }
+  },
+  "tx52": {
+    "user_id": "user15",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-21T09:39:44.262563",
+    "updated_at": "2025-05-21T09:41:44.262563",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "ADA",
+      "from_amount": "579.241912",
+      "to_amount": "693.74948",
+      "rate": "1.1977",
+      "conversion_id": "cnv813022"
+    }
+  },
+  "tx53": {
+    "user_id": "user15",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-24T09:39:44.262579",
+    "updated_at": "2025-04-24T09:44:44.262579",
+    "conversion": {
+      "from_asset": "ADA",
+      "to_asset": "SOL",
+      "from_amount": "785.604468",
+      "to_amount": "1130.396121",
+      "rate": "1.4389",
+      "conversion_id": "cnv132419"
+    }
+  },
+  "tx54": {
+    "user_id": "user16",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-19T09:39:44.262597",
+    "updated_at": "2025-05-19T09:45:44.262597",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.359618",
+      "price": "1258.5",
+      "amount": "452.58",
+      "order_id": "ord689742"
+    }
+  },
+  "tx55": {
+    "user_id": "user16",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-10T09:39:44.262611",
+    "updated_at": "2025-05-10T09:47:44.262611",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.72533",
+      "price": "43.25",
+      "amount": "31.37",
+      "order_id": "ord343554"
+    }
+  },
+  "tx56": {
+    "user_id": "user17",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-15T09:39:44.262626",
+    "updated_at": "2025-05-15T09:40:44.262626",
+    "order": {
+      "symbol": "BNBUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.749941",
+      "price": "312.75",
+      "amount": "234.54",
+      "order_id": "ord283781"
+    }
+  },
+  "tx57": {
+    "user_id": "user17",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-26T09:39:44.262639",
+    "updated_at": "2025-04-26T09:49:44.262639",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "BUY",
+      "order_type": "MARKET",
+      "quantity": "0.081357",
+      "price": "43.25",
+      "amount": "3.52",
+      "order_id": "ord707768"
+    }
+  },
+  "tx58": {
+    "user_id": "user17",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-04-26T09:39:44.262653",
+    "updated_at": "2025-04-26T09:41:44.262653",
+    "conversion": {
+      "from_asset": "ADA",
+      "to_asset": "SOL",
+      "from_amount": "511.040829",
+      "to_amount": "815.96225",
+      "rate": "1.5967",
+      "conversion_id": "cnv130624"
+    }
+  },
+  "tx59": {
+    "user_id": "user17",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-04-22T09:39:44.262668",
+    "updated_at": "2025-04-22T09:40:44.262668",
+    "order": {
+      "symbol": "BNBUSDT",
+      "side": "SELL",
+      "order_type": "LIMIT",
+      "quantity": "0.450785",
+      "price": "312.75",
+      "amount": "140.98",
+      "order_id": "ord303275"
+    }
+  },
+  "tx60": {
+    "user_id": "user18",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-18T09:39:44.262691",
+    "updated_at": "2025-05-18T09:43:44.262691",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BTC",
+      "from_amount": "210.965678",
+      "to_amount": "328.49406",
+      "rate": "1.5571",
+      "conversion_id": "cnv597507"
+    }
+  },
+  "tx61": {
+    "user_id": "user18",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-15T09:39:44.262713",
+    "updated_at": "2025-05-15T09:40:44.262713",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BTC",
+      "from_amount": "355.436782",
+      "to_amount": "290.609278",
+      "rate": "0.8176",
+      "conversion_id": "cnv557603"
+    }
+  },
+  "tx62": {
+    "user_id": "user18",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-01T09:39:44.262729",
+    "updated_at": "2025-05-01T09:41:44.262729",
+    "conversion": {
+      "from_asset": "BTC",
+      "to_asset": "SOL",
+      "from_amount": "1.19175",
+      "to_amount": "0.894982",
+      "rate": "0.751",
+      "conversion_id": "cnv540830"
+    }
+  },
+  "tx63": {
+    "user_id": "user18",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-19T09:39:44.262746",
+    "updated_at": "2025-05-19T09:42:44.262746",
+    "conversion": {
+      "from_asset": "BTC",
+      "to_asset": "SOL",
+      "from_amount": "0.215591",
+      "to_amount": "0.14016",
+      "rate": "0.6501",
+      "conversion_id": "cnv723419"
+    }
+  },
+  "tx64": {
+    "user_id": "user18",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-09T09:39:44.262763",
+    "updated_at": "2025-05-09T09:45:44.262763",
+    "order": {
+      "symbol": "SOLUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.253155",
+      "price": "43.25",
+      "amount": "10.95",
+      "order_id": "ord499519"
+    }
+  },
+  "tx65": {
+    "user_id": "user19",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-07T09:39:44.262780",
+    "updated_at": "2025-05-07T09:42:44.262780",
+    "conversion": {
+      "from_asset": "SOL",
+      "to_asset": "BTC",
+      "from_amount": "183.25831",
+      "to_amount": "99.209642",
+      "rate": "0.5414",
+      "conversion_id": "cnv371151"
+    }
+  },
+  "tx66": {
+    "user_id": "user20",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-20T09:39:44.262799",
+    "updated_at": "2025-05-20T09:49:44.262799",
+    "order": {
+      "symbol": "ETHUSDT",
+      "side": "SELL",
+      "order_type": "MARKET",
+      "quantity": "0.975602",
+      "price": "1258.5",
+      "amount": "1227.8",
+      "order_id": "ord573649"
+    }
+  },
+  "tx67": {
+    "user_id": "user20",
+    "type": "spot",
+    "status": "completed",
+    "created_at": "2025-05-19T09:39:44.262821",
+    "updated_at": "2025-05-19T09:45:44.262821",
+    "order": {
+      "symbol": "BNBUSDT",
+      "side": "BUY",
+      "order_type": "LIMIT",
+      "quantity": "0.229544",
+      "price": "312.75",
+      "amount": "71.79",
+      "order_id": "ord455569"
+    }
+  },
+  "tx68": {
+    "user_id": "user20",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-12T09:39:44.262835",
+    "updated_at": "2025-05-12T09:41:44.262835",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "SOL",
+      "from_amount": "5.609924",
+      "to_amount": "6.35909",
+      "rate": "1.1335",
+      "conversion_id": "cnv462540"
+    }
+  },
+  "tx69": {
+    "user_id": "user20",
+    "type": "convert",
+    "status": "completed",
+    "created_at": "2025-05-07T09:39:44.262854",
+    "updated_at": "2025-05-07T09:40:44.262854",
+    "conversion": {
+      "from_asset": "ETH",
+      "to_asset": "SOL",
+      "from_amount": "10.301756",
+      "to_amount": "14.827752",
+      "rate": "1.4393",
+      "conversion_id": "cnv642846"
+    }
+  }
+}
