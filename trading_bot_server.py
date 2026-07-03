@@ -14,22 +14,20 @@ from dotenv import load_dotenv
 
 from trading_assistant.agent import root_agent
 from trading_assistant.services.database.firestore_client import get_firestore_client
+from trading_assistant.observability import setup_observability
 
 dotenv_path = Path.cwd() / 'trading_assistant' / '.env'
 load_dotenv(dotenv_path=dotenv_path)
-logger_dotenv = logging.getLogger("dotenv_loader")
-if dotenv_path.exists():
-    logger_dotenv.info(f"Successfully loaded .env file from {dotenv_path}")
-else:
-    logger_dotenv.warning(f".env file not found at {dotenv_path}. API keys might be missing.")
 
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[logging.StreamHandler()]
-)
+# Structured JSON logging + OpenTelemetry tracing (ADK auto-emits spans once a
+# TracerProvider is registered).
+setup_observability(service_name="trading-bot-server")
 logger = logging.getLogger("trading_bot_server")
+
+if dotenv_path.exists():
+    logger.info(f"Successfully loaded .env file from {dotenv_path}")
+else:
+    logger.warning(f".env file not found at {dotenv_path}. API keys might be missing.")
 
 sessions = {}
 

@@ -236,9 +236,42 @@ The Streamlit frontend can be customized by modifying `streamlit_frontend.py`:
 - `get_kyc_status()` - Get KYC status
 - `get_region_restrictions()` - Get regional restrictions
 
+## 📈 Observability
+
+Structured, production-oriented telemetry lives in `trading_assistant/observability/`:
+
+- **Structured JSON logging** — every log line is a single JSON object (`logging_config.py`), ready for Cloud Logging ingestion.
+- **Intent vs. outcome capture** — ADK callbacks (`callbacks.py`) emit `user_intent`, `tool_call`, `tool_result` and `agent_outcome` events so each turn's intended action and actual result are traceable.
+- **Distributed tracing** — OpenTelemetry is initialised at startup (`tracing.py`); ADK auto-emits invocation / agent / tool / LLM spans. Logs are correlated with `trace_id` / `span_id`. Export via `OTEL_EXPORTER_OTLP_ENDPOINT`, or set `OTEL_CONSOLE_EXPORT=true` for local dev.
+- **PII redaction** — emails, credentials and wallet/key-length strings are redacted from logs (`redaction.py`) while trading numbers are preserved.
+
+Bootstrapped with a single call: `setup_observability(service_name=...)` (already wired into the server and CLI).
+
+## 🧪 Testing & Evaluation
+
+```bash
+pip install -r requirements-dev.txt
+pytest -m "not adk"        # fast unit tests (schemas + observability), no GCP needed
+```
+
+An ADK evalset (intent → expected tool trajectory) lives in `eval/`; run it with
+`RUN_ADK_EVAL=1 pytest tests/test_agent_eval.py` or `adk eval`. See
+[`eval/README.md`](eval/README.md). CI runs lint, compile and unit tests on every
+push (`.github/workflows/ci.yml`).
+
 ## 🚧 Deployment
 
-### Cloud Run Deployment
+### Infrastructure as Code (Terraform)
+
+Provision Firestore, a least-privilege service account, Artifact Registry and the
+Cloud Run service declaratively — see [`infra/README.md`](infra/README.md):
+
+```bash
+cd infra && cp terraform.tfvars.example terraform.tfvars   # edit values
+terraform init && terraform apply
+```
+
+### Cloud Run Deployment (ADK CLI)
 
 ```bash
 ./deploy_cloud_run.sh

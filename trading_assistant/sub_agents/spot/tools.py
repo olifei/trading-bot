@@ -1,6 +1,7 @@
 from google.adk.tools import FunctionTool, ToolContext
 from trading_assistant.services.trading.trading_api import create_spot_order
 from trading_assistant.services.market.market_api import get_market_price
+from trading_assistant.schemas import SpotOrderArgs, validate_args
 from typing import Optional, Dict, Any
 
 def execute_spot_order(symbol: str, side: str, order_type: str = "LIMIT", 
@@ -16,20 +17,22 @@ def execute_spot_order(symbol: str, side: str, order_type: str = "LIMIT",
         quantity: Trading quantity
         price: Limit price (required for LIMIT orders)
     """
+    model, err = validate_args(SpotOrderArgs, {
+        "symbol": symbol, "side": side, "order_type": order_type,
+        "quantity": quantity, "price": price,
+    })
+    if err:
+        return err
+    symbol, side, order_type = model.symbol, model.side, model.order_type
+    quantity, price = model.quantity, model.price
+
     user_id = tool_context.state.get("user_id", "user1")
-    
+
     print(f"[Spot] Executing order: {symbol} {side} {quantity}@{price}")
-    
-    if not symbol:
-        return {"status": "error", "message": "Trading pair not specified"}
-    if not side:
-        return {"status": "error", "message": "Trading side (BUY/SELL) not specified"}
+
     if not quantity:
         return {"status": "error", "message": "Trading quantity not specified"}
-    if order_type == "LIMIT":
-        if not price:
-            return {"status": "error", "message": "Price must be specified for LIMIT orders"}
-    else: # MARKET
+    if order_type == "MARKET":
         price = get_market_price(symbol)
     try:
         order = create_spot_order(

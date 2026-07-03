@@ -5,6 +5,7 @@ from trading_assistant import prompt
 from trading_assistant import config
 from trading_assistant.services.market.market_tool import create_market_price_tool, create_exchange_rate_tool
 from trading_assistant.services.utils.calculator_tool import create_calculator_tool
+from trading_assistant.observability.callbacks import log_user_intent, log_tool_call, log_tool_result, log_agent_outcome
 
 
 def create_market_data_agent():
@@ -22,6 +23,10 @@ def create_market_data_agent():
             exchange_rate_tool,
             calculator_tool
         ],
+        before_model_callback=log_user_intent,
+        before_tool_callback=log_tool_call,
+        after_tool_callback=log_tool_result,
+        after_agent_callback=log_agent_outcome,
         generate_content_config=types.GenerateContentConfig(
             temperature=config.MARKET_DATA_AGENT_CONFIG["temperature"],
             max_output_tokens=config.MARKET_DATA_AGENT_CONFIG.get("max_output_tokens"),

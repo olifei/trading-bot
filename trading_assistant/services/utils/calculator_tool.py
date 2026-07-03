@@ -1,5 +1,6 @@
 from decimal import Decimal, getcontext
 from google.adk.tools import FunctionTool, ToolContext
+from trading_assistant.schemas import CalculatorArgs, validate_args
 
 getcontext().prec = 18  # High precision for crypto calculations
 
@@ -32,6 +33,9 @@ def calculate_precise(a: str, b: str, operation: str, tool_context: ToolContext 
         - Input and output use string types to maintain numerical precision
         - Uses Python's Decimal library internally to ensure precise calculations
     """
+    _model, err = validate_args(CalculatorArgs, {"a": a, "b": b, "operation": operation})
+    if err:
+        return {**err, "result": None}
     try:
         a_decimal = Decimal(a)
         b_decimal = Decimal(b)

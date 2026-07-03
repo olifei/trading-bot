@@ -1,0 +1,85 @@
+{
+  "eval_set_id": "trading_assistant_evalset",
+  "name": "Trading Assistant Eval Set",
+  "description": "Intent -> expected tool trajectory checks for the trading assistant.",
+  "eval_cases": [
+    {
+      "eval_id": "market_price_btc",
+      "conversation": [
+        {
+          "invocation_id": "case-market-price-btc",
+          "user_content": {
+            "role": "user",
+            "parts": [{"text": "What is the current price of BTC?"}]
+          },
+          "final_response": {
+            "role": "model",
+            "parts": [{"text": "The current price of BTCUSDT is available from the market data tool."}]
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {"name": "get_price", "args": {"symbol": "BTC"}}
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "trading_bot",
+        "user_id": "user1",
+        "state": {"user_id": "user1"}
+      }
+    },
+    {
+      "eval_id": "portfolio_query",
+      "conversation": [
+        {
+          "invocation_id": "case-portfolio",
+          "user_content": {
+            "role": "user",
+            "parts": [{"text": "Show me my portfolio."}]
+          },
+          "final_response": {
+            "role": "model",
+            "parts": [{"text": "Here is a summary of the assets in your portfolio."}]
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {"name": "get_portfolio", "args": {}}
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "trading_bot",
+        "user_id": "user1",
+        "state": {"user_id": "user1"}
+      }
+    },
+    {
+      "eval_id": "exchange_rate_eth_btc",
+      "conversation": [
+        {
+          "invocation_id": "case-rate-eth-btc",
+          "user_content": {
+            "role": "user",
+            "parts": [{"text": "What is the exchange rate from ETH to BTC?"}]
+          },
+          "final_response": {
+            "role": "model",
+            "parts": [{"text": "The exchange rate between ETH and BTC is provided by the market data tool."}]
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {"name": "get_exchange_rate", "args": {"from_asset": "ETH", "to_asset": "BTC"}}
+            ]
+          }
+        }
+      ],
+      "session_input": {
+        "app_name": "trading_bot",
+        "user_id": "user1",
+        "state": {"user_id": "user1"}
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 from google.adk.tools import FunctionTool, ToolContext
 from trading_assistant.services.trading.trading_api import convert_currency
+from trading_assistant.schemas import ConvertArgs, validate_args
 from typing import Optional, Dict, Any
 
 def execute_convert_operation(from_asset: str, to_asset: str, amount: Optional[str] = None, 
@@ -29,30 +30,20 @@ def execute_convert_operation(from_asset: str, to_asset: str, amount: Optional[s
         - This tool is specifically for direct conversion; USDT-related trades should use spot_order_tool
         - User must have sufficient source asset to execute the conversion
     """
+    model, err = validate_args(ConvertArgs, {
+        "from_asset": from_asset, "to_asset": to_asset, "amount": amount,
+    })
+    if err:
+        return err
+    from_asset, to_asset, amount = model.from_asset, model.to_asset, model.amount
+
     user_id = tool_context.state.get("user_id", "user1")
-    
+
     print(f"[Convert] Executing conversion: {amount} {from_asset} → {to_asset}")
-    
-    # Validate required parameters
-    if not from_asset:
-        return {"status": "error", "message": "Source asset not specified"}
-    if not to_asset:
-        return {"status": "error", "message": "Target asset not specified"}
+
     if not amount:
         return {"status": "error", "message": "Conversion amount not specified"}
-    
-    # Check source and target assets can't be the same
-    if from_asset.upper() == to_asset.upper():
-        return {"status": "error", "message": f"Source and target assets cannot be the same ({from_asset})"}
-    
-    # Check neither source nor target is USDT
-    # Note: This tool is specifically for direct conversion; USDT trades should use spot_order_tool
-    if from_asset.upper() == "USDT" or to_asset.upper() == "USDT":
-        return {
-            "status": "error", 
-            "message": "USDT-related trades should use the Spot Trading feature. This conversion feature only supports direct conversion between cryptocurrencies."
-        }
-    
+
     # Execute conversion
     try:
         result = convert_currency(

@@ -1,0 +1,8 @@
+# Copy to terraform.tfvars and fill in your values.
+project_id      = "your-gcp-project-id"
+region          = "us-central1"
+database_id     = "trading-bot-db"
+container_image = "us-central1-docker.pkg.dev/your-gcp-project-id/trading-bot/trading-bot:latest"
+
+# Set to true only if the service should be publicly reachable.
+allow_unauthenticated = false

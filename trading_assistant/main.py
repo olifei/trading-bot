@@ -7,10 +7,11 @@ from trading_assistant.services.database.firestore_client import get_firestore_c
 from trading_assistant.agent import root_agent
 
 from dotenv import load_dotenv
-import logging
+
+from trading_assistant.observability import setup_observability
 
 load_dotenv()
-logging.basicConfig(level=logging.ERROR)  # 可选值: DEBUG, INFO, WARNING, ERROR, CRITICAL
+setup_observability(service_name="trading-bot-cli")
 
 
 async def main():

@@ -1,5 +1,6 @@
 from google.adk.tools import FunctionTool, ToolContext
 from trading_assistant.services.market.market_api import get_market_price, get_conversion_rate
+from trading_assistant.schemas import MarketPriceArgs, ExchangeRateArgs, validate_args
 
 
 def get_price(symbol: str, tool_context: ToolContext = None) -> dict:
@@ -26,6 +27,10 @@ def get_price(symbol: str, tool_context: ToolContext = None) -> dict:
         - If the requested trading pair is not found, an error status will be returned
         - Price field is always returned as a string to maintain precision
     """
+    model, err = validate_args(MarketPriceArgs, {"symbol": symbol})
+    if err:
+        return err
+    symbol = model.symbol
     price_data = get_market_price(symbol)
     
     if "error" not in price_data:
@@ -78,7 +83,11 @@ def get_exchange_rate(from_asset: str, to_asset: str, tool_context: ToolContext 
         - Rate field is always returned as a string to maintain precision
         - If rate cannot be obtained, an error status will be returned
     """
-    rate_data = get_conversion_rate(from_asset, to_asset)    
+    model, err = validate_args(ExchangeRateArgs, {"from_asset": from_asset, "to_asset": to_asset})
+    if err:
+        return err
+    from_asset, to_asset = model.from_asset, model.to_asset
+    rate_data = get_conversion_rate(from_asset, to_asset)
     rate = rate_data.get("rate", "0.00")
     formatted_rate = f"Exchange rate: 1 {from_asset} = {rate} {to_asset}"
     

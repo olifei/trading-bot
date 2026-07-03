@@ -5,6 +5,7 @@ from trading_assistant import prompt
 from trading_assistant import config
 from trading_assistant.tools.memory import load_user_profile
 from trading_assistant.tools.compliance import kyc_compliance_check
+from trading_assistant.observability.callbacks import log_user_intent, log_agent_outcome
 
 from trading_assistant.sub_agents.spot.agent import create_spot_agent
 from trading_assistant.sub_agents.portfolio.agent import create_portfolio_agent
@@ -30,7 +31,8 @@ root_agent = Agent(
         market_data_agent,
     ],
     before_agent_callback=load_user_profile,
-    before_model_callback=kyc_compliance_check,
+    before_model_callback=[kyc_compliance_check, log_user_intent],
+    after_agent_callback=log_agent_outcome,
     generate_content_config=types.GenerateContentConfig(
         temperature=config.ROOT_AGENT_CONFIG["temperature"],
         max_output_tokens=config.ROOT_AGENT_CONFIG.get("max_output_tokens"),

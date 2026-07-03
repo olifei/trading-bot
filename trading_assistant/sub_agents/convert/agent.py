@@ -5,6 +5,7 @@ from trading_assistant import prompt
 from trading_assistant import config
 from trading_assistant.tools.compliance import kyc_compliance_check, region_compliance_check, trade_params_compliance_check
 from trading_assistant.tools.memory import load_user_profile
+from trading_assistant.observability.callbacks import log_user_intent, log_tool_call, log_tool_result, log_agent_outcome
 
 from trading_assistant.services.portfolio.portfolio_tool import create_get_portfolio_tool
 from trading_assistant.services.market.market_tool import create_market_price_tool
@@ -29,8 +30,10 @@ def create_convert_agent():
             calculator_tool
         ],
         before_agent_callback=load_user_profile,
-        before_model_callback=[kyc_compliance_check, region_compliance_check],
-        before_tool_callback=trade_params_compliance_check,
+        before_model_callback=[kyc_compliance_check, region_compliance_check, log_user_intent],
+        before_tool_callback=[trade_params_compliance_check, log_tool_call],
+        after_tool_callback=log_tool_result,
+        after_agent_callback=log_agent_outcome,
         generate_content_config=types.GenerateContentConfig(
             temperature=config.CONVERT_AGENT_CONFIG["temperature"],
             max_output_tokens=config.CONVERT_AGENT_CONFIG.get("max_output_tokens"),
