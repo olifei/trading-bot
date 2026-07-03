@@ -1,6 +1,5 @@
 import asyncio
 from google.adk.runners import Runner
-from google.adk.sessions import InMemorySessionService
 from google.genai import types
 
 from trading_assistant.services.database.firestore_client import get_firestore_client
@@ -9,32 +8,42 @@ from trading_assistant.agent import root_agent
 from dotenv import load_dotenv
 
 from trading_assistant.observability import setup_observability
+from trading_assistant.services.session.session_factory import (
+    create_session_service,
+    get_or_create_session,
+)
+from trading_assistant.services.memory.memory_factory import create_memory_service
+from trading_assistant.services.memory.consolidation import schedule_consolidation
 
 load_dotenv()
 setup_observability(service_name="trading-bot-cli")
+
+APP_NAME = "trading_bot"
 
 
 async def main():
     print("Starting Trading Bot...")
     user_id = select_user_id()
-    session_service = InMemorySessionService()
-    
-    app_name = "trading_bot"
+    session_service = create_session_service()
+    memory_service = create_memory_service()
+
     runner = Runner(
         agent=root_agent,
-        app_name=app_name,
-        session_service=session_service
+        app_name=APP_NAME,
+        session_service=session_service,
+        memory_service=memory_service,
     )
-    
+
     session_id = f"{user_id}_session"
-    await session_service.create_session(
-        app_name=app_name,
+    await get_or_create_session(
+        session_service,
+        app_name=APP_NAME,
         user_id=user_id,
         session_id=session_id,
-        state={"user_id": user_id}
+        state={"user_id": user_id},
     )
-    
-    print(f"Session created, ID: {session_id}")
+
+    print(f"Session ready, ID: {session_id}")
     
     while True:
         user_input = input("\nEnter your trading query (or 'exit' to quit): ")
@@ -69,6 +78,12 @@ async def main():
             
             elif hasattr(event, 'error_message') and event.error_message:
                 print(f"[{event.author} error: {event.error_message}")
+
+        # Consolidate this turn into long-term memory in the background.
+        schedule_consolidation(
+            memory_service, session_service,
+            app_name=APP_NAME, user_id=user_id, session_id=session_id,
+        )
 
 def select_user_id():
     print("\n=== User Selection ===")

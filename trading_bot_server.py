@@ -5,7 +5,6 @@ import json
 import os
 import signal
 from google.adk.runners import Runner
-from google.adk.sessions import InMemorySessionService
 from google.genai import types
 import logging
 import firebase_admin
@@ -15,6 +14,12 @@ from dotenv import load_dotenv
 from trading_assistant.agent import root_agent
 from trading_assistant.services.database.firestore_client import get_firestore_client
 from trading_assistant.observability import setup_observability
+from trading_assistant.services.session.session_factory import (
+    create_session_service,
+    get_or_create_session,
+)
+from trading_assistant.services.memory.memory_factory import create_memory_service
+from trading_assistant.services.memory.consolidation import schedule_consolidation
 
 dotenv_path = Path.cwd() / 'trading_assistant' / '.env'
 load_dotenv(dotenv_path=dotenv_path)
@@ -29,48 +34,55 @@ if dotenv_path.exists():
 else:
     logger.warning(f".env file not found at {dotenv_path}. API keys might be missing.")
 
-sessions = {}
-
 # Socket服务器设置
 SERVER_ADDRESS = './trading_bot_socket'
 MAX_BUFFER_SIZE = 65536
 
-async def process_message(user_id, message):
-    global sessions
-    
-    if user_id not in sessions:
-        logger.info(f"为用户 {user_id} 创建新会话")
-        session_service = InMemorySessionService()
-        
-        app_name = "trading_bot"
-        runner = Runner(
+APP_NAME = "trading_bot"
+
+# Shared, persistent runtime. Sessions are stored in a database and long-term
+# memory in Firestore, so history survives restarts and is shared across a
+# user's sessions. A single Runner is reused across users (user_id / session_id
+# are passed per run).
+_session_service = None
+_memory_service = None
+_runner = None
+
+
+def get_runtime():
+    global _session_service, _memory_service, _runner
+    if _runner is None:
+        _session_service = create_session_service()
+        _memory_service = create_memory_service()
+        _runner = Runner(
             agent=root_agent,
-            app_name=app_name,
-            session_service=session_service
+            app_name=APP_NAME,
+            session_service=_session_service,
+            memory_service=_memory_service,
         )
-        
-        session_id = f"{user_id}_session"
-        
-        await session_service.create_session(
-            app_name=app_name,
-            user_id=user_id,
-            session_id=session_id,
-            state={"user_id": user_id}
-        )
-        
-        sessions[user_id] = (session_service, runner, session_id)
-        logger.info(f"会话已创建，ID: {session_id}")
-    else:
-        logger.info(f"使用用户 {user_id} 的现有会话")
-        session_service, runner, session_id = sessions[user_id]
-    
+        logger.info("Runtime initialized (persistent sessions + long-term memory)")
+    return _session_service, _memory_service, _runner
+
+
+async def process_message(user_id, message):
+    session_service, memory_service, runner = get_runtime()
+    session_id = f"{user_id}_session"
+
+    await get_or_create_session(
+        session_service,
+        app_name=APP_NAME,
+        user_id=user_id,
+        session_id=session_id,
+        state={"user_id": user_id},
+    )
+
     user_message = types.Content(
         role="user",
         parts=[types.Part(text=message)]
     )
-    
+
     responses = []
-    
+
     try:
         async for event in runner.run_async(
             user_id=user_id,
@@ -95,7 +107,14 @@ async def process_message(user_id, message):
             "author": "error",
             "text": f"处理消息时出错: {str(e)}"
         })
-    
+
+    # Fire-and-forget: consolidate this session into long-term memory without
+    # blocking the response.
+    schedule_consolidation(
+        memory_service, session_service,
+        app_name=APP_NAME, user_id=user_id, session_id=session_id,
+    )
+
     return responses
 
 async def handle_client(reader, writer):

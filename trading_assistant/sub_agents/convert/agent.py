@@ -1,4 +1,5 @@
 from google.adk.agents import Agent
+from google.adk.tools import preload_memory
 from google.genai import types
 
 from trading_assistant import prompt
@@ -27,7 +28,8 @@ def create_convert_agent():
             portfolio_tool,
             market_price_tool,
             convert_tool,
-            calculator_tool
+            calculator_tool,
+            preload_memory
         ],
         before_agent_callback=load_user_profile,
         before_model_callback=[kyc_compliance_check, region_compliance_check, log_user_intent],

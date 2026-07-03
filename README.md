@@ -236,6 +236,27 @@ The Streamlit frontend can be customized by modifying `streamlit_frontend.py`:
 - `get_kyc_status()` - Get KYC status
 - `get_region_restrictions()` - Get regional restrictions
 
+## 🧠 Context & Memory
+
+- **Persistent sessions** — conversational history is stored in a database via
+  ADK's `DatabaseSessionService` (`services/session/`), so history survives
+  restarts. Configure with `SESSION_DB_URL` (default
+  `sqlite+aiosqlite:///./trading_bot_sessions.db`; use `postgresql+asyncpg://…`
+  in production).
+- **Long-term memory (persistent store)** — `FirestoreMemoryService`
+  (`services/memory/`) persists consolidated conversation facts in Firestore and
+  retrieves them by keyword ranking. Select the backend with `MEMORY_BACKEND`
+  (`firestore` default, `inmemory`, or `vertex_rag`).
+- **Memory retrieval** — sub-agents include ADK's `preload_memory` tool, which
+  auto-injects relevant past memories into context for each turn.
+- **Async memory consolidation** — after every turn the session is written to
+  long-term memory in a background `asyncio` task, so responses are never
+  blocked (`services/memory/consolidation.py`).
+- **History compaction** — a `before_model_callback` folds older turns into a
+  compact summary in the system prompt and keeps only recent turns, bounding
+  token usage (`tools/compaction.py`; tune with `HISTORY_MAX_CONTENTS` /
+  `HISTORY_KEEP_RECENT`).
+
 ## 📈 Observability
 
 Structured, production-oriented telemetry lives in `trading_assistant/observability/`:

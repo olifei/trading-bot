@@ -9,6 +9,10 @@ __pycache__/
 venv/
 env/
 
+# Local session database (DatabaseSessionService)
+*.db
+*.sqlite3
+
 # OS / editor
 .DS_Store
 

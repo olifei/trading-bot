@@ -1,4 +1,5 @@
 from google.adk.agents import Agent
+from google.adk.tools import preload_memory
 from google.genai import types
 
 from trading_assistant import prompt
@@ -21,7 +22,8 @@ def create_market_data_agent():
         tools=[
             market_price_tool,
             exchange_rate_tool,
-            calculator_tool
+            calculator_tool,
+            preload_memory
         ],
         before_model_callback=log_user_intent,
         before_tool_callback=log_tool_call,
